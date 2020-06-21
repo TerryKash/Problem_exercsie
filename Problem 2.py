@@ -22,13 +22,18 @@ If n is 20 and mn=2 and mx = 5
 
 5 is a divisor of 20
 '''
+print("\t\t\tDivide the Apple")
 
-n = int(input("How much apples you have? "))
-mn = int(input("What's the minimum number of students whom you want to distributes the apples? "))
-mx = int(input("What's the maxmum number of students whom you want to distributes the apples? "))
+try:
+    n = int(input("How much apples you have? "))
+    mn = int(input("What's the minimum number of students whom you want to distributes the apples? "))
+    mx = int(input("What's the maxmum number of students whom you want to distributes the apples? "))
 
-for i in range(mn, mx+1):
-    if n % i == 0:
-        print(f"{i} is a divisor of {n}.")
-    else:
-        print(f"{i} is not a divisor of {n}.")
+    for i in range(mn, mx+1):
+        if n % i == 0:
+            print(f"{i} is a divisor of {n}.")
+        else:
+            print(f"{i} is not a divisor of {n}.")
+
+except Exception as e:
+    print("Enter the number only.")
