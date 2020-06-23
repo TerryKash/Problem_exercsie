@@ -22,3 +22,20 @@ Next palindrome for 10 is 11
 
 Next palindrome for 2133 is 2222
 '''
+
+def reverse(num):
+    n = str(num)
+    r = n[::-1]
+    return r
+
+n = int(input("How many numbers you want to check? "))
+for i in range(n):
+    num= int(input("Enter any number :- "))
+    if str(num)==reverse(num):
+        print ("Already palindrome.")
+    else:
+        while True:
+            num+= 1
+            if str(num)==reverse(num):
+                print(f"Next palindrome is {num}")
+                break
