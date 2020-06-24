@@ -32,10 +32,13 @@ reverse1 = a[:]
 reverse1.reverse()
 print("Reversed list using Inbulid function: ", reverse1)
 
+
 def swapping_char():
     b = len(a)
     for i in range(b//2):
         a[i], a[b-i-1] = a[b-i-1], a[i]
         # b = b - i
     print("Reverse list using Swapping method", a)
+
+
 swapping_char()

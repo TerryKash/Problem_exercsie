@@ -15,7 +15,7 @@ i = ""
 while i != "q":
 
     user_input = input("Enter you age or year of birth: ")
-    if (len(user_input) == 4 and int(user_input) > 2020) or (len(user_input) == 2 and int(user_input) < 0) :
+    if (len(user_input) == 4 and int(user_input) > 2020) or (len(user_input) == 2 and int(user_input) < 0):
         print("You are not born yet!\nPlease enter a valid year or age.")
 
     elif len(user_input) == 4 and int(user_input) < 1900:
@@ -23,7 +23,7 @@ while i != "q":
         print(f"Your age is: {age}.")
         print("You'r the oldest person alive!!")
 
-    elif  int(user_input) > 120 and len(user_input) == 3:
+    elif int(user_input) > 120 and len(user_input) == 3:
         age = int(user_input)
         print("You'r the oldest person alive!!")
 
