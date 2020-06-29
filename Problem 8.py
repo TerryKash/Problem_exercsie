@@ -22,20 +22,30 @@ If the table is correct, your function returns None
 import random
 
 def rohanMultiplication(n):
-    # table = [i*n for i in range(random.randint(1, 11))]
-    for i in range(1, 11):
+    table1 = [i*n for i in range(1, 11)] 
+    table1[random.randint(0, 10)] = random.randint(1, 60)
+    return table1
+        
 
-        if i == 4:
-            table.append((i*n) + 2)
+def myMultiplication(n):
+    table2 = [i*n for i in range(1, 11)]
+    return table2
+
+
+def isCorrect(table1, table2):
+    for ind in range(0, 10):
+        if table1[ind] == table2[ind]:
+            # print(f'{ind+1} index is correct')
+            continue
         else:
-            i = i*n
-            table.append(i)
-    return (table)
+            print(f'There is something wrong at index {ind} in rohan multiplication table')
 
-def isCorrect(table, number):
-    pass
 
 if __name__ == "__main__":
 
-    n = int(input("Enter the value: "))
-    print(rohanMultiplication(n))
+    n = int(input("Enter the value: \n"))
+    print("Rohan Multipliation Table")
+    print(rohanMultiplication(n), "\n")
+    print("Correct Multipliation Table")
+    print(myMultiplication(n), "\n")
+    isCorrect(rohanMultiplication(n), myMultiplication(n))
