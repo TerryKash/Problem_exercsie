@@ -31,10 +31,11 @@ def list_generator(n):
 
 
 def jumblingNames(list):
-    seperate =' '
-    
+    for i in range(0, 2):
+        # print(i)
+        print(random.choice(list) + " " + random.choice(list))
 
 
 if __name__ == "__main__":
-    n = int(input("How many names do you have"))
-    print(list_generator(n))
+    n = int(input("How many names do you have: "))
+    jumblingNames(list_generator(n))
